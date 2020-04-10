@@ -5,21 +5,21 @@ public class Iteration1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println("¹è°íÇÁ´Ù");
-		System.out.println("¹è°íÇÁ´Ù");
-		System.out.println("¹è°íÇÁ´Ù");
+		System.out.println("ë°°ê³ í”„ë‹¤");
+		System.out.println("ë°°ê³ í”„ë‹¤");
+		System.out.println("ë°°ê³ í”„ë‹¤");
 		System.out.println("---------------");
 		
-		//Ãâ¹ßÁ¡
+		//ì¶œë°œì 
 		int index = 0;
-		while (index < 3) { // ( )°ıÈ£¾È¿¡ Á¾·áÁ¡À» ¾´´Ù.
-			System.out.println("¹è°íÇÁ³×?");
-			//Áß°£¿¡ ¼öÇàÇÒ ³»¿ë
+		while (index < 3) { // ( )ê´„í˜¸ì•ˆì— ì¢…ë£Œì ì„ ì“´ë‹¤.
+			System.out.println("ë°°ê³ í”„ë„¤?");
+			//ì¤‘ê°„ì— ìˆ˜í–‰í•  ë‚´ìš©
 			index = index + 1;
 		}
-		System.out.println(index); //3¿¡¼­ ¸ØÃß±â ¶§¹®¿¡ 3ÀÌ¶ó´Â ¼ıÀÚ°¡ ³ª¿Â´Ù.
+		System.out.println(index); //3ì—ì„œ ë©ˆì¶”ê¸° ë•Œë¬¸ì— 3ì´ë¼ëŠ” ìˆ«ìê°€ ë‚˜ì˜¨ë‹¤.
 		
-		//image1.png,image2.png,image3.png,image4.png¸¦ ¼ø¼­´ë·Î Ãâ·ÂÇÏµµ·Ï whileÀ» ÀÛ¼º
+		//image1.png,image2.png,image3.png,image4.pngë¥¼ ìˆœì„œëŒ€ë¡œ ì¶œë ¥í•˜ë„ë¡ whileì„ ì‘ì„±
 		
 //		int idx = 1;
 //		

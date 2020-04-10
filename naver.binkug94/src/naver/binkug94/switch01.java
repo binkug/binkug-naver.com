@@ -6,12 +6,12 @@ public class switch01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Á¤¼ö¸¦ ¹Ş¾Æ¼­ ÀÔ·Â
-		//1ÀÌ¸é ÇÑ½Ä 2ÀÌ¸é Áß½Ä 3ÀÌ¸é ÀÏ½Ä
-		//³ª¸ÓÁö °æ¿ì´Â Àß¸øµÈ ÀÔ·ÂÀÌ¶ó°í Ãâ·Â
-		//switch¸¦ ÀÌ¿ëÇØ¼­ Ã³¸®
+		//ì •ìˆ˜ë¥¼ ë°›ì•„ì„œ ì…ë ¥
+		//1ì´ë©´ í•œì‹ 2ì´ë©´ ì¤‘ì‹ 3ì´ë©´ ì¼ì‹
+		//ë‚˜ë¨¸ì§€ ê²½ìš°ëŠ” ì˜ëª»ëœ ì…ë ¥ì´ë¼ê³  ì¶œë ¥
+		//switchë¥¼ ì´ìš©í•´ì„œ ì²˜ë¦¬
 		
-		//ÇÁ·Î±×·¥À» ÀĞ±â ÁÁ°Ô ÇÏ±â À§ÇØ¼­ »ó¼ö ¼±¾ğ
+		//í”„ë¡œê·¸ë¨ì„ ì½ê¸° ì¢‹ê²Œ í•˜ê¸° ìœ„í•´ì„œ ìƒìˆ˜ ì„ ì–¸
 		final String KOREA = "1";
 		final String CHINA = "2";
 		final String JAPAN = "3";
@@ -19,52 +19,52 @@ public class switch01 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("¸Ş´º¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
-		System.out.print("1.ÇÑ½Ä 2.Áß½Ä 3.ÀÏ½Ä   :  ");
+		System.out.println("ë©”ë‰´ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+		System.out.print("1.í•œì‹ 2.ì¤‘ì‹ 3.ì¼ì‹   :  ");
 		
 		String menu = sc.nextLine();
 
 		
 		switch (menu) {
 		case KOREA:
-			System.out.println("ÇÑ½Ä");
+			System.out.println("í•œì‹");
 			break;
 		case CHINA:
-			System.out.println("Áß½Ä");
+			System.out.println("ì¤‘ì‹");
 			break;
 		case JAPAN:
-			System.out.println("ÀÏ½Ä");
+			System.out.println("ì¼ì‹");
 			break;
 		default:
-			System.out.println("Àß¸ø ÀÔ·Â ÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥ í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			break;
 		}
 
 		
 		if (menu.equals(KOREA)) {
-			System.out.println("ÇÑ½Ä");
+			System.out.println("í•œì‹");
 		}else if (menu.equals(CHINA)) {
-			System.out.println("Áß½Ä");
+			System.out.println("ì¤‘ì‹");
 		}else if (menu.equals(JAPAN)) {
-			System.out.println("ÀÏ½Ä");
+			System.out.println("ì¼ì‹");
 		}else {
-			System.out.println("Àß¸ø ÀÔ·Â ÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥ í•˜ì…¨ìŠµë‹ˆë‹¤.");
 		}
 		
 		if (menu.equals(KOREA)) {
-			System.out.println("ÇÑ½Ä");
+			System.out.println("í•œì‹");
 		}
 		if (menu.equals(CHINA)) {
-			System.out.println("Áß½Ä");
+			System.out.println("ì¤‘ì‹");
 		}
 		if (menu.equals(JAPAN)) {
-			System.out.println("ÀÏ½Ä");
+			System.out.println("ì¼ì‹");
 		}
 		if (menu.equals(KOREA) && menu.equals(CHINA) && menu.equals(JAPAN)) {
-			System.out.println("Àß¸ø ÀÔ·Â ÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥ í•˜ì…¨ìŠµë‹ˆë‹¤.");
 		}
 		
-		//½ºÄ³³Ê ´İ±â
+		//ìŠ¤ìºë„ˆ ë‹«ê¸°
 		sc.close();
 	}
 	

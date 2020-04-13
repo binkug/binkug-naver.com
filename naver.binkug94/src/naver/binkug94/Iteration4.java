@@ -23,6 +23,7 @@ public class Iteration4 {
 		
 		avg2 = (int)(avg2/100+0.5)*100;
 		System.out.println("반올림 : "+avg2);
+		
 	}
 
 }

@@ -7,6 +7,8 @@ public class Main {
 		Inter2 obj2 = new InterImp1();
 		obj2.method2();
 		obj.method();
+		
+		int [] a  = {17,20,30,15,29};
 
 	}
 }

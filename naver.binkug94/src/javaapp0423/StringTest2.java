@@ -69,8 +69,15 @@ public class StringTest2 {
 		for(String temp : array) {
 			
 			System.out.println(temp);
-
-				sum = sum + Integer.parseInt(temp);
+				try {
+					if(sum%2==0) {
+						sum = sum + Integer.parseInt(temp);
+					}
+					
+				} catch (Exception e) {
+					
+				}
+				
 		
 		}
 //		String temp = "Hello Java Hello Java hi";

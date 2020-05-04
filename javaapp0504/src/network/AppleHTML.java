@@ -26,6 +26,22 @@ public class AppleHTML {
 			//문자열을 받기 위한 스트림 생성
 			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
+			//문자열 읽어오기
+			String html = "";
+			while (true) {
+				String line = br.readLine();
+				if(line == null) {
+					break;
+				}
+				html = html + line + "\n";
+				
+			}
+			
+			//정리 작업
+			br.close();
+			con.disconnect();
+			
+			System.out.println(html);
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

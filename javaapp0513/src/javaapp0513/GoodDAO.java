@@ -37,4 +37,43 @@ public class GoodDAO {
 		
 	}
 	
+	//code를 가지고 데이터를 찾아오는 메소드
+	//code는 기본키
+	//select * from goods where code = ?
+	//하나의 행만 리턴하는 경우에는 데이터가 없으면 null을 리턴
+	public Good selectOneGoods(String code){
+		
+		Good good = null;
+		
+		return good;
+		
+	}
+	//데이터를 삽입하는 메소드
+	//삽입이나 수정은 매개변수가 DTO 아니면 Map
+	//-1이 리턴되면 실패 0이 리턴되면 조건에 맞는 데이터가 없음 양수가 리턴되면 작업을 수행했다
+	public int insertGood(Good good) {
+		
+		int result = -1;
+		
+		
+		return result;
+	}
+	//삽입과 수정은 똑같아서 메소드 명만 바꿔 만들면 된다.
+	public int updateGood(Good good) {
+		
+		int result = -1;
+		
+		return result;
+	}
+	//삭제하는 메소드
+	//삭제는 대부분 기본키만으로 수행한다.
+	public int deleteGood(String code) {
+		
+		int result = -1;
+		
+		return result;
+	}
+	
+	
+	
 }

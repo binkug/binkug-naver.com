@@ -1,6 +1,6 @@
 package javaapp0518;
 
-public class Covid19DTO {
+public class CovidDTO {
 	private int num;
 	private String region;
 	private String nation;
@@ -8,6 +8,11 @@ public class Covid19DTO {
 	private int confirmcount;
 	private int deathcount;
 	
+	@Override
+	public String toString() {
+		return "Covid19DTO [num=" + num + ", region=" + region + ", nation=" + nation + ", pop=" + pop
+				+ ", confirmcount=" + confirmcount + ", deathcount=" + deathcount + "]";
+	}
 	//DB 연동을 하기 때문에 더이상 생성자를 생성 할 필요가 없다.
 	public int getNum() {
 		return num;

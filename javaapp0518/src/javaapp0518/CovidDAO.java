@@ -271,7 +271,7 @@ public class CovidDAO {
 			
 			//현재 날짜를 포함한 파일 경로를 만들기
 			//sql 인스턴스 생성
-			Date today1 = new Date(System.currentTimeMillis());
+			today1 = new Date(System.currentTimeMillis());
 			//현재 디렉토리에 오늘날짜.log 문자열 생성
 			String filepath = "./"+today1.toString()+".log";
 			

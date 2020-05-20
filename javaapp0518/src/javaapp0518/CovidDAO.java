@@ -1,6 +1,13 @@
 package javaapp0518;
 
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -107,12 +114,38 @@ public class CovidDAO {
 
 				// list에 추가
 				list.add(covid);
+
 			}
+
+
+			rs.close();
+			//현재 날짜를 포함한 파일 경로를 만들기
+			//sql 인스턴스 생성
+			Date today = new Date(System.currentTimeMillis());
+			//현재 디렉토리에 오늘날짜.log 문자열 생성
+			String filepath = "./" + today.toString() + ".log";
+			try(PrintWriter pw = new PrintWriter(new FileOutputStream(filepath,true))){
+				java.util.Date date = new java.util.Date();
+				pw.print(date.toString()+","+"전체보기"+"\n");
+				pw.flush();
+			}
+			
+			Date curdate = new Date(System.currentTimeMillis());
+			String filename = "./"+curdate.toString()+".dat";
+			try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename,true))){
+				Log log = new Log();
+				log.setDate(new java.util.Date());
+				log.setTask("전체보기");
+				oos.writeObject(log);
+				oos.flush();
+			}
+			
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 
 		}
-
+		
+		
 		close();
 
 		return list;
@@ -140,14 +173,29 @@ public class CovidDAO {
 				covid.setPop(rs.getInt("pop"));
 				covid.setConfirmcount(rs.getInt("confirmcount"));
 				covid.setDeathcount(rs.getInt("deathcount"));
+				
+				
 
 			}
 
+
+			//현재 날짜를 포함한 파일 경로를 만들기
+			//sql 인스턴스 생성
+			Date today = new Date(System.currentTimeMillis());
+			//현재 디렉토리에 오늘날짜.log 문자열 생성
+			String filepath = "./"+today.toString()+".log";
+			
+			try(PrintWriter pw = new PrintWriter(new FileOutputStream(filepath,true))){
+				java.util.Date date = new java.util.Date();
+				pw.print(date.toString()+","+"상세보기"+"\n");
+				pw.flush();
+			}
+			
 		} catch (Exception e) {
 			System.err.println("선택 데이터 조회 에러");
 			System.out.println(e.getMessage());
 		}
-
+		
 		close();
 		return covid;
 
@@ -186,6 +234,17 @@ public class CovidDAO {
 	// select를 제외한 모든 sql의 실행은 영향 받은 행의 개수를 리턴
 	// int쪽은 sql의 결과가 와야한다.
 	public int insert(CovidDTO covid) {
+		
+		//Serializable 된 데이터 읽어오기
+		Date today1 = new Date(System.currentTimeMillis());
+		String filename = "./"+today1.toString()+".dat";
+		try(ObjectInputStream oos = new ObjectInputStream(new FileInputStream(filename))){
+			Log log = (Log) oos.readObject();
+			System.out.println(log);
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
 		// 여기서 -1은 의미없는 값으로 삽입 실패를 의미하는 값
 		// 어떤 음수라도 가능 0은 조심
 		int result = -1;
@@ -209,6 +268,18 @@ public class CovidDAO {
 			pstmt.setInt(6, covid.getDeathcount());
 
 			result = pstmt.executeUpdate();
+			
+			//현재 날짜를 포함한 파일 경로를 만들기
+			//sql 인스턴스 생성
+			Date today1 = new Date(System.currentTimeMillis());
+			//현재 디렉토리에 오늘날짜.log 문자열 생성
+			String filepath = "./"+today1.toString()+".log";
+			
+			try(PrintWriter pw = new PrintWriter(new FileOutputStream(filepath,true))){
+				java.util.Date date = new java.util.Date();
+				pw.print(date.toString()+","+"삽입"+"\n");
+				pw.flush();
+			}
 
 		} catch (Exception e) {
 			// 자신이 알아볼 수 있는 예외 메세지를 출력

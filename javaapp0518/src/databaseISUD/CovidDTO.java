@@ -1,4 +1,4 @@
-package javaapp0518;
+package databaseISUD;
 
 public class CovidDTO {
 	private int num;

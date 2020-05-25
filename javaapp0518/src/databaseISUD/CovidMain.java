@@ -1,4 +1,4 @@
-package javaapp0518;
+package databaseISUD;
 
 import java.util.List;
 import java.util.Scanner;

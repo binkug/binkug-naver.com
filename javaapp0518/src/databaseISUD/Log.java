@@ -1,4 +1,4 @@
-package javaapp0518;
+package databaseISUD;
 
 import java.io.Serializable;
 import java.util.Date;

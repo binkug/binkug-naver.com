@@ -1,4 +1,4 @@
-package javaapp0526;
+package xmlParsing;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;

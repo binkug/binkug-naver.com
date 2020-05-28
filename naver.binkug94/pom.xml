@@ -25,6 +25,9 @@
     </plugins>
   </build>
   
+  
+  
+  
   <dependencies>
   			<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
 		<dependency>
@@ -41,5 +44,19 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
 		</dependency>
+		
+				<!-- https://mvnrepository.com/artifact/xml-apis/xml-apis -->
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>1.4.01</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.19</version>
+		</dependency>
+		
   </dependencies>
 </project>

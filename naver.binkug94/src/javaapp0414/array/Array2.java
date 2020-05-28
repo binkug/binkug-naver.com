@@ -1,4 +1,4 @@
-package array;
+package javaapp0414.array;
 
 public class Array2 {
 

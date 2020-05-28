@@ -24,7 +24,7 @@ public class AlcoholMain {
 		try (CsvBeanReader icb = new CsvBeanReader(
 				new BufferedReader(
 						new InputStreamReader(
-								new FileInputStream("C:\\Users\\30404\\Desktop\\경찰청_음주운전적발기록_20200518.csv"))),CsvPreference.STANDARD_PREFERENCE)){
+								new FileInputStream("C:\\Users\\30404\\Documents\\csv\\경찰청_음주운전적발기록_20200518.csv"))),CsvPreference.STANDARD_PREFERENCE)){
 			
 			//헤더만들기
 			//첫번재 행이 열 제목이러고 설정하고 그 내용을 headers에 저장

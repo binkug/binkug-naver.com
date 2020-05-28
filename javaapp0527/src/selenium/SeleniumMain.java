@@ -10,7 +10,7 @@ public class SeleniumMain {
 		try {
 			
 			//크롬을 사용하기 위한 환경 설정
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\30404\\Desktop\\driver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\30404\\Documents\\driver\\chromedriver.exe");
 			//크롬 실행 객체 만들기
 			WebDriver driver = new ChromeDriver();
 			//페에지 접속

@@ -18,7 +18,7 @@ public class CycleMain {
 		try(CsvBeanReader reader = new CsvBeanReader(
 				new BufferedReader(
 						new InputStreamReader(
-								new FileInputStream("C:\\Users\\30404\\Desktop\\제주특별자치도_서귀포시_자전거도로현황_20160631.csv"))),CsvPreference.STANDARD_PREFERENCE);) {
+								new FileInputStream("C:\\Users\\30404\\Documents\\csv\\제주특별자치도_서귀포시_자전거도로현황_20160631.csv"))),CsvPreference.STANDARD_PREFERENCE);) {
 			//System.out.println(reader);
 			//첫번째 줄이 헤더인지 여부를 결정
 			//첫번째 줄은 읽지 않음

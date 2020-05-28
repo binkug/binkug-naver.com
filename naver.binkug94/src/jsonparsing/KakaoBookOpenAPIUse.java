@@ -1,4 +1,4 @@
-package jsonParsing;
+package jsonparsing;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

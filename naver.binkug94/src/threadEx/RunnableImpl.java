@@ -1,4 +1,4 @@
-package javaapp0429;
+package threadEx;
 
 public class RunnableImpl implements Runnable {
 

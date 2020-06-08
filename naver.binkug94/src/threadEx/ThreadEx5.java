@@ -1,4 +1,4 @@
-package javaapp0429;
+package threadEx;
 
 import java.util.concurrent.Semaphore;
 

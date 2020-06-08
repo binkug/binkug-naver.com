@@ -1,4 +1,4 @@
-package javaapp0429;
+package threadEx;
 
 public class Customer extends Thread{
 	//공유자원을 소비하는 메소드

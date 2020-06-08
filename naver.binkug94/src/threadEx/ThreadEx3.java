@@ -1,4 +1,4 @@
-package javaapp0429;
+package threadEx;
 
 public class ThreadEx3 extends Thread{
 	//스레드로 동작할 메소드
